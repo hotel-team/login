@@ -4,18 +4,20 @@
     <title>Hotel-ZSEIT</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script src="https://unpkg.com/vue"></script>
+    
 </head>
 <body>
 
-        <div class="container-login100left m-t-t"><div class="wrap-login100"><a href="login.html">Tymczasowe zaloguj się</div></div>
+    <div id="app" v-bind:class="{conday: day,  conday_out: day_fade_out, connight_out: night_fade_out,  connight:night,}" >
+        <span v-on:click="toogle"><button>theme</button></span>
+        <div class="container-login100left m-t-t"><div class="wrap-login100"><a href="login.html">Tymczasowe zaloguj się</a></div></div>
         <div class="container-login100right m-t-t"><div class="wrap-login100"></div></div>
         
         <div class="container-login100left m-t-b"><div class="wrap-login100"></div></div>
         <div class="container-login100right m-t-b"><div class="wrap-login100"></div></div>
         <div style="clear: left;"></div>
-
-
-
+    </div>
+    <script src='js/nowy.js'></script>
 </body>
 </html>
