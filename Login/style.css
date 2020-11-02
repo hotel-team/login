@@ -6,23 +6,24 @@
 }
 
 body, html {
-	height: 100%;
+
   font-family: 'Lato', sans-serif;
   background:#000000; 
 
 
-
 }
 .conday, .conday_out, .connight, .connight_out{
+  position: fixed;
+  top:0;
+  left: 0;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: 100%;
   z-index: 1;
 }
 .conday{
-  background-image: url("css/main.jpg"); 
+  background-image: url("main.jpg"); 
 
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -31,7 +32,7 @@ body, html {
             animation: fadein 2s;
 }
 .conday_out{
-  background-image: url("css/main.jpg");
+  background-image: url("main.jpg");
   -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeout 2s; /* Firefox < 16 */
         -ms-animation: fadeout 2s; /* Internet Explorer */
@@ -39,7 +40,7 @@ body, html {
             animation: fadeout 2s;
 }
 .connight{
-  background-image: url("css/main2.jpg"); 
+  background-image: url("main2.jpg"); 
   z-index: 1;
   -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 2s; /* Firefox < 16 */
@@ -48,36 +49,80 @@ body, html {
             animation: fadein 2s;
 }
 .connight_out{
-  background-image: url("css/main2.jpg");  
+  background-image: url("main2.jpg");  
   -webkit-animation: fadeout 2s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadeout 2s; /* Firefox < 16 */
         -ms-animation: fadeout 2s; /* Internet Explorer */
          -o-animation: fadeout 2s; /* Opera < 12.1 */
             animation: fadeout 2s;
 }
-
+@media (orientation: landscape){
+  .conday, .conday_out, .connight, .connight_out{
+  height: 100%;
+  }
   .container-login100left {
-    width: 35%;
+    width: 30%;
+    height: 35%;
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    left: 13%;
+  }
+  .container-login100right {
+    width: 30%;
+    height: 35%;
+    z-index: 2;
+    position: fixed;
+    left: 56%;
+  }
+  #c1, #c2{
+    top:10%;
+  }
+  #c3, #c4{
+    top:55%;
+  }
+}
+@media (orientation: portrait){
+  .conday, .conday_out, .connight, .connight_out{
+    width: 100%;
+    }
+  .container-login100left {
+    width: 80%;
+    height: 35%;
+    z-index: 2;
+    position: relative;
     margin-left: 10%;
-    height: 100px;
+    display: block;
+  }
+  .container-login100right {
+    width: 80%;
+    height: 35%;
+    z-index: 2;
+    display: block;
+    position: relative;
+    margin-left: 10%;
+  }
+  #c1, #c2,#c3,#c4{
+    margin-top:10%;
+  }
+
+}
+  .container-login100left {
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
     display: -ms-flexbox;
-    display: flex;
+
     flex-wrap: wrap;
     float: left;
     text-align: center;
-    padding: 15px;
-    z-index: 2;
+    
+
 
 }
 
 
   .container-login100right {
-    width: 35%;
-    margin-left: 10%;
-    height: 100px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -86,8 +131,11 @@ body, html {
     flex-wrap: wrap;
     float: left;
     text-align: center;
-    padding: 15px;
-    z-index: 2;
+
+    
+
+
+    
     
 
   
@@ -95,11 +143,12 @@ body, html {
   
   
   .wrap-login100 {
-    width: 390px;
+    width: 100%;
+    height: 100%;
     background: #fff;
     border-radius: 10px;
     overflow: hidden;
-    padding: 77px 55px 33px 55px;
+    padding: 3% 3% 3% 3%;
   
   
     box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
@@ -241,3 +290,7 @@ to   { opacity: 0; }
   float: right;
 }
 .lab{margin-right: 10px;font-size: 32px;}
+.imgcon{
+  width: 100%;
+}
+a{display: block;}
